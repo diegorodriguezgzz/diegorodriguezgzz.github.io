@@ -6,46 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Test suite styles -->
-  <link rel="stylesheet" href="css/test.css">
+  <link rel="stylesheet" href="css/main.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <title>Destreza Duo</title>
 </head>
-
+<div class="options-container" id="options-container--desktop">
+  <!-- <button id="btn--rotate-desktop">
+    <img src="assets/rotate.png" alt="Rotate button">
+  </button> -->
+  <div id="timer-container">
+    <h1 class="timer"></h1>
+  </div>
+  <button id="start" class="btn-start">Start</button>
+</div>
 <body>
-  <div id="timerContainer">
-    <h1 id="testTimer"></h1>
+  <div class="btn-container">
+    <button id="btn--rotate-left" class="btn-rotate">Rotate left</button>
+    <button id="btn--rotate-right" class="btn-rotate">Rotate right</button>
   </div>
-  <div class="rot-div">
-    <button id="rotLeft">Rotate left</button>
-    <button id="rotRight">Rotate right</button>
-  </div>
-  <h3>Available pieces</h3>
-  <div id="availablePieces">
-    <!-- This is filled from classes.js -> game.js -->
-  </div>
-  <div id="testDashboard">
-    <button id="start">Start</button>
-  </div>
-  <div id="notifContainer">
-    <h2 id="testNotif"></h2>
-  </div>
-  <h3>Board</h3>
-  <!-- Test grid for SVG manipulation-->
   <section id="board-section">
-    <div id="board">
-      <!-- <tr class="row"> 
-        <td class="game-piece-container">
-          <img id="svg0" class="board-slot" src="/assets/1A-Semicircle-box.svg">
-        </td> ...-->
+    <div class="pieces-grand">
+      <h3 id="pieces-title">Available pieces</h3>
+      <div id="pieces-container">
+        <!-- This is filled from classes.js -> gameFunctions.js -> game.js -->
+      </div>
     </div>
-  </section>
-  <script src="js/pieces.js"></script>
-  <script src="js/classes.js"></script>
-  <script src="js/loadImages.js"></script>
-  <script src="js/audios.js"></script>
-  <script src="js/game.js"></script>
-  <!-- <script src="js/img-to-svg.js"></script> -->
+    <div class="board-grand">
+      <h3 id="board-title">Board</h3>
+      <div id="board">
+      <!-- This is filled from classes.js -> gameFunctions.js -> game.js -->
+      </div>
+    </div>
+</section>
+<div class="options-container" id="options-container--mobile">
+  <button id="start--mobile" class="btn-start">Start</button>
+  <div id="timer-container--mobile">
+    <h1 class="timer"></h1>
+  </div>
+  <button id="btn--rotate-mobile">
+    <img src="assets/rotate.png" alt="Rotate button">
+  </button>
+  </div>
+<script src="js/pieces.js"></script>
+<script src="js/classes.js"></script>
+<script src="js/gameFunctions.js"></script>
+<script src="js/loadImages.js"></script>
+<script src="js/audios.js"></script>
+<script src="js/game.js"></script>
 </body>
 
 </html>
